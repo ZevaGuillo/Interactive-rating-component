@@ -6,6 +6,8 @@ import App from './App';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <div className=' min-h-screen bg-very-dark-blue flex justify-center items-center'>
+      <App />
+    </div>
   </React.StrictMode>
 );
