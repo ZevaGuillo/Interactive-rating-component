@@ -1,9 +1,25 @@
+import React from 'react'
 import iconStar from '../images/icon-star.svg'
 import {QuizButton, SubmitButton} from './buttons'
 
 
 export default function QuizPage(props){
+    const [active, setActive] = React.useState(0);
+    
+    const handleSubmit = ()=>{
+        if(active){
+            props.submitState(true)
+            props.chooseSelect(active)
+        }
+    }
 
+    const createButtonsQuiz = ()=>{
+        let btns = []
+        for(let i=1; i<=5; i++){
+            btns.push(<QuizButton value={i} key={i} active={active} setActive={(value)=>setActive(value)}/>)
+        }
+        return btns
+    }
 
     return (
     <>
@@ -17,15 +33,7 @@ export default function QuizPage(props){
         <div className=' w-full flex place-content-around'>
             {createButtonsQuiz()}
         </div>
-        <SubmitButton/>
+        <SubmitButton click={handleSubmit}/>
       </>
     )
-}
-
-function createButtonsQuiz(){
-    let btns = []
-    for(let i=1; i<=5; i++){
-        btns.push(<QuizButton value={i}/>)
-    }
-    return btns
 }
