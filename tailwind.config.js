@@ -11,6 +11,16 @@ module.exports = {
       'dark-blue': 'hsl(213, 19%, 18%)',
       'very-dark-blue': 'hsl(216, 12%, 8%)',
     },
+    borderRadius: {
+      'card': '30px',
+      'full': '50%',
+      'submit': '50rem'
+    },
+    extend: {
+      width: {
+        'lg': '27rem',
+      }
+    }
   },
   plugins: [],
 }

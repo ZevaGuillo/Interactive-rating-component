@@ -23,11 +23,11 @@ export default function QuizPage(props){
 
     return (
     <>
-        <div className='w-9 p-3 bg-dark-blue rounded-full'>
+        <div className='w-11 h-11 flex justify-center items-center p-3 bg-very-dark-blue rounded-full'>
         <img src={iconStar} alt="star" className='w-auto'/>
         </div>
-        <h1 className='text-3xl my-3 text-white'>How did we do?</h1>
-        <p className='my-5 text-base'>
+        <h1 className='text-3xl my-4 text-white'>How did we do?</h1>
+        <p className='my-4 mb-8 text-medium-grey text-base'>
             Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!
         </p>
         <div className=' w-full flex place-content-around'>
