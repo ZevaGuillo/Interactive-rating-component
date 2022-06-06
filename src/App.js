@@ -7,7 +7,7 @@ function App() {
   const [select, setSelect] = React.useState(0);
 
   return (
-    <div className="rounded-card w-96 px-6 pt-8 bg-dark-blue text-3xl font-bold lg:w-lg">
+    <div className="rounded-card w-96 px-6 pt-8 text-3xl font-bold card-bg lg:w-lg">
       {
         !isSubmit?
           <QuizPage submitState={(value)=>setIsSubmit(value)} chooseSelect={setSelect}/>:

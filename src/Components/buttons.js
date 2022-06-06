@@ -3,10 +3,12 @@ function QuizButton(props){
     const handleOption = ()=>{
         props.setActive(props.value)
     }
-    let active = props.active===props.value?'bg-primary text-very-dark-blue':''
-    let className = " w-14 h-14 flex justify-center items-center text-white text-lg rounded-full bg-very-dark-blue " +active +'hover:bg-medium-grey '
+
+    let className = `bg-dark-blue-2 w-14 h-14 flex justify-center items-center text-medium-grey text-lg rounded-full hover:bg-medium-grey hover:text-white`
+    let active = props.active===props.value?className.replace('bg-dark-blue-2','bg-primary').replace('text-medium-grey','text-white'):className
+    
     return (
-        <div className={className} onClick={handleOption}>{props.value}</div>
+        <div className={active} onClick={handleOption}>{props.value}</div>
     )
 }
 
